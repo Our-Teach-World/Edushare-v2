@@ -1,31 +1,31 @@
 :root {
-    --background: #0f0f13;
-    --foreground: #f9f9fa;
-    --card: #0f0f13;
-    --card-foreground: #f9f9fa;
-    --popover: #0f0f13;
-    --popover-foreground: #f9f9fa;
-    --primary: #00ffff;
-    --primary-foreground: #0f0f13;
-    --secondary: #27272e;
-    --secondary-foreground: #f9f9fa;
-    --muted: #27272e;
-    --muted-foreground: #a1a1aa;
-    --accent: #ff00ff;
-    --accent-foreground: #f9f9fa;
-    --destructive: #7f1d1d;
-    --destructive-foreground: #f9f9fa;
-    --border: #27272e;
-    --input: #27272e;
-    --ring: #d4d4d8;
+    --background: #ffffff;
+    --foreground: #09090b;
+    --card: #ffffff;
+    --card-foreground: #09090b;
+    --popover: #ffffff;
+    --popover-foreground: #09090b;
+    --primary: #18181b;
+    --primary-foreground: #fafafa;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #18181b;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --accent: #f4f4f5;
+    --accent-foreground: #18181b;
+    --destructive: #ef4444;
+    --destructive-foreground: #fafafa;
+    --border: #e4e4e7;
+    --input: #e4e4e7;
+    --ring: #18181b;
     --radius: 0.5rem;
   
-    /* Neon colors */
-    --neon-pink: #ff00ff;
-    --neon-blue: #00ffff;
-    --neon-green: #00ff00;
-    --neon-yellow: #ffff00;
-    --neon-purple: #9d00ff;
+    /* Neon colors overridden to grayscale for structure retention but b/w look */
+    --neon-pink: #000000;
+    --neon-blue: #000000;
+    --neon-green: #000000;
+    --neon-yellow: #000000;
+    --neon-purple: #000000;
   }
   
   * {
@@ -349,24 +349,28 @@
   
   .neon-button {
     background-color: transparent;
-    border: 2px solid var(--neon-blue);
-    color: var(--neon-blue);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border: 2px solid #000000;
+    color: #000000;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
     transition: all 0.3s ease;
   }
   
   .neon-button:hover {
-    background-color: rgba(0, 255, 255, 0.1);
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+    transform: translate(2px, 2px);
     text-decoration: none;
   }
   
   .neon-text {
-    animation: glow 2s ease-in-out infinite;
+    /* Kept class name but removed glowing animation */
+    font-weight: 800;
   }
   
   .neon-border {
-    border: 2px solid var(--neon-blue);
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border: 2px solid #000000;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
   }
   
   .card {
@@ -441,7 +445,7 @@
   .input:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   }
   
   .label {
@@ -470,7 +474,7 @@
   .select:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   }
   
   .checkbox {
@@ -489,7 +493,7 @@
   .checkbox:checked {
     background-color: var(--primary);
     border-color: var(--primary);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%230f0f13' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
     background-size: 0.75rem;
     background-repeat: no-repeat;
     background-position: center;
@@ -498,7 +502,7 @@
   .checkbox:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   }
   
   .textarea {
@@ -517,7 +521,7 @@
   .textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 2px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
   }
   
   .separator {
@@ -603,8 +607,8 @@
     top: 0;
     z-index: 50;
     width: 100%;
-    border-bottom: 1px solid rgba(39, 39, 46, 0.4);
-    background-color: rgba(15, 15, 19, 0.95);
+    border-bottom: 1px solid var(--border);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
   }
   
@@ -637,8 +641,8 @@
   
   /* Footer */
   .footer {
-    border-top: 1px solid rgba(39, 39, 46, 0.4);
-    background-color: var(--background);
+    border-top: 1px solid var(--border);
+    background-color: var(--secondary);
   }
   
   .footer-container {
@@ -672,7 +676,7 @@
   .hero-bg {
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.2), rgba(15, 15, 19, 0) 70%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0) 70%);
     z-index: 0;
   }
   
@@ -710,7 +714,7 @@
   /* Features Section */
   .features {
     padding: 4rem 0;
-    background-color: rgba(39, 39, 46, 0.5);
+    background-color: var(--secondary);
   }
   
   .features-header {
@@ -745,7 +749,7 @@
   }
   
   .feature-card:hover {
-    border-color: var(--neon-blue);
+    border-color: #000000;
   }
   
   .feature-icon {
@@ -774,10 +778,11 @@
   }
   
   .cta-container {
-    background: linear-gradient(to right, rgba(0, 255, 255, 0.2), rgba(157, 0, 255, 0.2));
-    border: 1px solid var(--border);
+    background: var(--background);
+    border: 2px solid #000000;
     border-radius: var(--radius);
     padding: 2rem;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
   }
   
   .cta-content {

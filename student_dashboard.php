@@ -188,8 +188,8 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
 
             .folder-card:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 8px 20px rgba(0, 247, 255, 0.2);
-                border-color: #00F7FF;
+                box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+                border-color: #000000;
             }
 
             .folder-icon {
@@ -292,7 +292,7 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
             z-index: 9999;
             transition: right 0.3s ease-in-out;
             /* Smooth slide */
-            border-left: 1px solid rgba(0, 247, 255, 0.3);
+            border-left: 1px solid var(--border);
         }
 
         #chat-widget.sidebar-open {
@@ -318,7 +318,7 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
 
         .resizer:hover,
         .resizing .resizer {
-            background: rgba(0, 247, 255, 0.5);
+            background: rgba(0, 0, 0, 0.1);
             /* Highlight on hover/drag */
         }
 
@@ -330,18 +330,18 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
             /* Right side trigger */
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, #00F7FF 0%, #ff00ff 100%);
+            background: #ffffff;
             border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid #000000;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             z-index: 10000;
             transition: transform 0.2s;
-            color: white;
+            color: #000000;
             font-size: 30px;
-            border: none;
         }
 
         #chat-trigger:hover {
@@ -349,13 +349,13 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
         }
 
         .chat-header {
-            background: linear-gradient(135deg, #2b32b2 0%, #1488cc 100%);
-            color: white;
+            background: #ffffff;
+            color: #000000;
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid #00F7FF;
+            border-bottom: 2px solid #000000;
         }
 
         .chat-messages {
@@ -381,9 +381,10 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
 
         .user-message {
             align-self: flex-end;
-            background: linear-gradient(135deg, #00F7FF 0%, #00c6ff 100%);
-            color: #000;
+            background: #f4f4f5;
+            color: #000000;
             border-bottom-right-radius: 4px;
+            border: 1px solid #e4e4e7;
         }
 
         .ai-message {
@@ -425,13 +426,13 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
         }
 
         .chat-input-area input:focus {
-            border-color: #00F7FF;
+            border-color: #000000;
         }
 
         .chat-input-area button {
-            background: linear-gradient(135deg, #00F7FF 0%, #2b32b2 100%);
-            color: white;
-            border: none;
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
             width: 45px;
             height: 45px;
             border-radius: 50%;
@@ -439,7 +440,7 @@ if ($selectedTeacher && is_dir($uploadDir . $selectedTeacher)) {
             justify-content: center;
             align-items: center;
             cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
             transition: transform 0.2s;
             font-size: 18px;
             /* For emoji */

@@ -151,24 +151,24 @@ foreach ($categories as $cat) {
         /* Theme Variables */
         :root {
             --bg: #ffffff;
-            --fg: #1a1a1a;
-            --accent: #00F7FF;
-            --accent-dark: #00a8cc;
-            --neon: #00F7FF;
-            --neon-hover: #00a8cc;
-            --shadow: rgba(0, 247, 255, 0.3);
-            --border: #e0e0e0;
+            --fg: #09090b;
+            --accent: #000000;
+            --accent-dark: #18181b;
+            --neon: #000000;
+            --neon-hover: #18181b;
+            --shadow: rgba(0, 0, 0, 1);
+            --border: #e4e4e7;
         }
 
         [data-theme="dark"] {
-            --bg: #0a0a0a;
-            --fg: #e0e0e0;
-            --accent: #00F7FF;
-            --accent-dark: rgb(103, 161, 174);
-            --neon: #00F7FF;
-            --neon-hover: #00a8cc;
-            --shadow: rgba(0, 247, 255, 0.3);
-            --border: #3d3d3d;
+            --bg: #ffffff;
+            --fg: #09090b;
+            --accent: #000000;
+            --accent-dark: #18181b;
+            --neon: #000000;
+            --neon-hover: #18181b;
+            --shadow: rgba(0, 0, 0, 1);
+            --border: #e4e4e7;
         }
 
         /* General Styles */
@@ -233,7 +233,7 @@ foreach ($categories as $cat) {
             background-color: white;
             transition: 0.4s;
             border-radius: 50%;
-            box-shadow: 0 0 10px var(--neon);
+            box-shadow: 2px 2px 0px var(--neon);
         }
 
         input:checked+.slider {
@@ -253,8 +253,8 @@ foreach ($categories as $cat) {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
-            box-shadow: 0 0 15px var(--shadow);
-            border: 1px solid var(--border);
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+            border: 2px solid #000000;
         }
 
         .profile-pic {
@@ -271,12 +271,12 @@ foreach ($categories as $cat) {
             object-fit: cover;
             margin-bottom: 15px;
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px var(--neon);
+            box-shadow: 2px 2px 0px var(--neon);
         }
 
         .profile-pic img:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 20px var(--neon-hover);
+            box-shadow: 4px 4px 0px var(--neon-hover);
         }
 
         .profile-pic input[type="file"] {
@@ -310,27 +310,28 @@ foreach ($categories as $cat) {
             width: calc(100% - 22px);
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ff00ff;
+            border: 2px solid #000000;
             border-radius: 5px;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
+            background: #ffffff;
+            color: #09090b;
         }
 
         button {
-            background: linear-gradient(135deg, var(--neon) 0%, #ff00ff 100%);
-            color: white;
-            border: none;
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
             padding: 12px 25px;
             border-radius: 8px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px var(--neon);
+            box-shadow: 2px 2px 0px var(--neon);
             font-weight: bold;
         }
 
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 15px var(--neon-hover);
+            background: #000000;
+            color: #ffffff;
         }
 
         /* File Management */
@@ -348,12 +349,12 @@ foreach ($categories as $cat) {
             color: var(--fg);
             font-size: 1em;
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px var(--neon);
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
         }
 
         #fileSearch:focus {
-            box-shadow: 0 0 15px var(--neon-hover);
-            border-color: #ff00ff;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+            border-color: var(--neon);
         }
 
         .search-stats {
@@ -401,7 +402,7 @@ foreach ($categories as $cat) {
 
         .file-list li:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 10px var(--neon);
+            box-shadow: 2px 2px 0px var(--neon);
         }
 
         .file-list li::before {
@@ -435,11 +436,11 @@ foreach ($categories as $cat) {
         }
 
         .file-list a:hover {
-            text-shadow: 0 0 10px var(--neon);
+            text-shadow: 1px 1px 0px var(--neon);
         }
 
         .file-list span {
-            color: #ff00ff;
+            color: #71717a;
             margin-right: 15px;
             font-size: 0.9em;
         }
@@ -450,14 +451,16 @@ foreach ($categories as $cat) {
         }
 
         .delete-btn {
-            background: #ff4444;
-            box-shadow: 0 0 10px #ff4444;
+            background: #ffffff;
+            color: #dc2626;
+            border: 2px solid #dc2626;
+            box-shadow: 2px 2px 0px #dc2626;
         }
 
         .delete-btn:hover {
-            background: #cc0000;
-            box-shadow: 0 0 15px #cc0000;
-            animation: pulse-red 1s infinite;
+            background: #dc2626;
+            color: #ffffff;
+            animation: none;
         }
 
         @keyframes pulse-red {
@@ -476,20 +479,22 @@ foreach ($categories as $cat) {
 
         /* Logout Button */
         .logout-btn {
-            background: linear-gradient(135deg, var(--neon) 0%, #ff00ff 100%);
+            background: #ffffff;
+            border: 2px solid #000000;
             padding: 14px 30px;
             border-radius: 8px;
             text-decoration: none;
-            color: white;
+            color: #000000;
             display: inline-block;
             margin-top: 20px;
-            box-shadow: 0 0 15px var(--neon);
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
             transition: all 0.3s ease;
         }
 
         .logout-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 20px #ff00ff;
+            background: #000000;
+            color: #ffffff;
         }
 
         /* Responsive Design */
@@ -534,7 +539,7 @@ foreach ($categories as $cat) {
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(5px);
             z-index: 9999;
             display: none;
@@ -546,12 +551,12 @@ foreach ($categories as $cat) {
         .spinner {
             width: 60px;
             height: 60px;
-            border: 5px solid transparent;
+            border: 5px solid #e4e4e7;
             border-top: 5px solid var(--neon);
             border-radius: 50%;
             animation: spin 1s linear infinite;
             margin-bottom: 20px;
-            box-shadow: 0 0 15px var(--neon);
+            box-shadow: 0 0 0px var(--neon);
         }
 
         @keyframes spin {
@@ -570,7 +575,7 @@ foreach ($categories as $cat) {
             font-size: 1.5em;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-shadow: 0 0 10px var(--neon);
+            text-shadow: 0 0 0px var(--neon);
             animation: pulse-text 1.5s infinite;
         }
 

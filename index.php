@@ -21,7 +21,7 @@
       <nav class="navbar-menu">
         <ul class="flex gap-4">
           <li><a href="index.php" class="tab active">Home</a></li>
-
+          <li><a href="about.php" class="tab">About</a></li>
           <li><a href="contact.php" class="tab">Contact</a></li>
         </ul>
       </nav>
@@ -88,7 +88,7 @@
         <div class="features-grid">
           <!-- Feature 1 -->
           <div class="feature-card">
-            <div class="feature-icon" style="background-color: rgba(0, 255, 255, 0.2);">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-upload" style="color: var(--neon-blue);"></i>
             </div>
             <h3 class="feature-title">Easy File Uploads</h3>
@@ -99,7 +99,7 @@
 
           <!-- Feature 2 -->
           <div class="feature-card">
-            <div class="feature-icon" style="background-color: rgba(0, 255, 0, 0.2);">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-download" style="color: var(--neon-green);"></i>
             </div>
             <h3 class="feature-title">Simple Access</h3>
@@ -110,7 +110,7 @@
 
           <!-- Feature 3 -->
           <div class="feature-card">
-            <div class="feature-icon" style="background-color: rgba(157, 0, 255, 0.2);">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-shield-alt" style="color: var(--neon-purple);"></i>
             </div>
             <h3 class="feature-title">Secure Sharing</h3>
@@ -121,7 +121,7 @@
 
           <!-- Feature 4 -->
           <div class="feature-card">
-            <div class="feature-icon" style="background-color: rgba(255, 255, 0, 0.2);">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-book-open" style="color: var(--neon-yellow);"></i>
             </div>
             <h3 class="feature-title">Organized Content</h3>
@@ -132,7 +132,7 @@
 
           <!-- Feature 5 -->
           <div class="feature-card">
-            <div class="feature-icon" style="background-color: rgba(255, 0, 255, 0.2);">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-users" style="color: var(--neon-pink);"></i>
             </div>
             <h3 class="feature-title">User Management</h3>
@@ -143,7 +143,7 @@
 
           <!-- Feature 6 -->
           <div class="feature-card">
-            <div class="feature-icon" style="background-color: rgba(0, 255, 255, 0.2);">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-arrow-right" style="color: var(--neon-blue);"></i>
             </div>
             <h3 class="feature-title">Seamless Integration</h3>
@@ -157,12 +157,12 @@
 
     <!-- AI Chatbot Section -->
     <section class="ai-chatbot-section"
-      style="padding: 80px 0; background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.95)); border-top: 1px solid rgba(0, 247, 255, 0.1); border-bottom: 1px solid rgba(0, 247, 255, 0.1);">
+      style="padding: 80px 0; background: var(--secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
       <div class="container">
         <div class="text-center" style="margin-bottom: 3rem; text-align: center;">
           <h2 class="section-title neon-text" style="font-size: 2.5rem; margin-bottom: 1rem;">Meet Your <span
               style="color: var(--neon-blue);">AI Companion</span></h2>
-          <p class="section-description" style="max-width: 700px; margin: 0 auto; color: #a0a0a0;">
+          <p class="section-description" style="max-width: 700px; margin: 0 auto; color: var(--muted-foreground);">
             Stuck on a problem? Our intelligent AI chatbot is here to help you understand concepts, summarize documents,
             and learn faster.
           </p>
@@ -170,9 +170,8 @@
 
         <div class="features-grid">
           <!-- AI Feature 1 -->
-          <div class="feature-card"
-            style="border: 1px solid rgba(0, 247, 255, 0.3); box-shadow: 0 0 15px rgba(0, 247, 255, 0.1);">
-            <div class="feature-icon" style="background-color: rgba(0, 255, 255, 0.1);">
+          <div class="feature-card">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-robot" style="color: var(--neon-blue);"></i>
             </div>
             <h3 class="feature-title">Instant Answers</h3>
@@ -182,9 +181,8 @@
           </div>
 
           <!-- AI Feature 2 -->
-          <div class="feature-card"
-            style="border: 1px solid rgba(255, 0, 255, 0.3); box-shadow: 0 0 15px rgba(255, 0, 255, 0.1);">
-            <div class="feature-icon" style="background-color: rgba(255, 0, 255, 0.1);">
+          <div class="feature-card">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-headphones" style="color: var(--neon-pink);"></i>
             </div>
             <h3 class="feature-title">Audio Responses</h3>
@@ -194,9 +192,8 @@
           </div>
 
           <!-- AI Feature 3 -->
-          <div class="feature-card"
-            style="border: 1px solid rgba(0, 255, 0, 0.3); box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);">
-            <div class="feature-icon" style="background-color: rgba(0, 255, 0, 0.1);">
+          <div class="feature-card">
+            <div class="feature-icon" style="background-color: rgba(0, 0, 0, 0.05);">
               <i class="fas fa-file-pdf" style="color: var(--neon-green);"></i>
             </div>
             <h3 class="feature-title">Export Notes</h3>

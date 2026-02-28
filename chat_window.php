@@ -21,15 +21,13 @@ $username = $_SESSION['username'];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- jsPDF -->
 
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            --ai-bubble: #ffffff;
-            --user-bubble: #2563eb;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-        }
+        --primary: #000000;
+        --primary-hover: #18181b;
+        --bg-gradient: #f4f4f5;
+        --ai-bubble: #ffffff;
+        --user-bubble: #e4e4e7;
+        --text-main: #09090b;
+        --text-muted: #71717a;
 
         * {
             box-sizing: border-box;
@@ -124,9 +122,9 @@ $username = $_SESSION['username'];
         .user-message {
             align-self: flex-end;
             background: var(--user-bubble);
-            color: white;
+            color: var(--text-main);
             border-bottom-right-radius: 4px;
-            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            border: 1px solid #e4e4e7;
         }
 
         .ai-message {
@@ -134,8 +132,7 @@ $username = $_SESSION['username'];
             background: var(--ai-bubble);
             color: var(--text-main);
             border-bottom-left-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 1px solid #e4e4e7;
         }
 
         /* Markdown Styles inside AI Message */
@@ -144,15 +141,15 @@ $username = $_SESSION['username'];
         }
 
         .ai-message code {
-            background: #f1f5f9;
+            background: #e4e4e7;
             padding: 2px 5px;
             border-radius: 4px;
             font-family: monospace;
         }
 
         .ai-message pre {
-            background: #1e293b;
-            color: #f8fafc;
+            background: #09090b;
+            color: #ffffff;
             padding: 15px;
             border-radius: 10px;
             overflow-x: auto;
@@ -176,12 +173,11 @@ $username = $_SESSION['username'];
         #chat-input {
             flex: 1;
             padding: 14px 20px;
-            border: 2px solid #e2e8f0;
+            border: 2px solid #e4e4e7;
             border-radius: 14px;
             outline: none;
             font-size: 15px;
             transition: border-color 0.2s;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
         }
 
         #chat-input:focus {
@@ -189,18 +185,22 @@ $username = $_SESSION['username'];
         }
 
         .send-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
+            background: #ffffff;
+            color: #000000;
+            border: 2px solid #000000;
             padding: 0 24px;
             border-radius: 12px;
             cursor: pointer;
             font-weight: 600;
-            transition: background 0.2s;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+            transition: all 0.2s;
         }
 
         .send-btn:hover {
-            background: var(--primary-hover);
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+            background: #000000;
+            color: #ffffff;
         }
 
         /* Utility */
